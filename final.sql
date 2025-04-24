@@ -25,10 +25,7 @@ CREATE TABLE courses
 );
 select * from courses;
 
-"""Kategoriler (Categories): Eğitim kategorilerini (yapayzeka (VARCHAR(100)), blokzincir (VARCHAR(100)),
-siber güvenlik (VARCHAR(100)) vb.) yönetebilecek bir tablo oluşturun. Bu tabloda bir Birincil Anahtar
-(PK) (INTEGER veya SMALLINT) tanımlayın. Eğitimler ile kategoriler arasında bir ilişki kurun (Yabancı
-Anahtar (FK) (INTEGER veya SMALLINT) kullanılarak)."""
+
 
 CREATE TABLE categories (
     category_id SMALLINT PRIMARY KEY,
