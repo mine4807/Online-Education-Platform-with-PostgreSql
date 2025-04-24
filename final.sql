@@ -10,7 +10,7 @@ CREATE TABLE members
     firstname VARCHAR(50),
     lastname VARCHAR(50)
 );
-select * from members;
+--select * from members;
 
 
 CREATE TABLE courses
@@ -23,7 +23,7 @@ CREATE TABLE courses
 	finish_date DATE,
     instructor_name VARCHAR(100) NOT NULL
 );
-select * from courses;
+--select * from courses;
 
 
 
@@ -31,14 +31,14 @@ CREATE TABLE categories (
     category_id SMALLINT PRIMARY KEY,
     category_name VARCHAR(100) UNIQUE NOT NULL
 );
- select * from categories;
+--select * from categories;
 
 ALTER TABLE courses
 ADD COLUMN category_id SMALLINT,
 ADD CONSTRAINT fk_category
 FOREIGN KEY (category_id) REFERENCES categories(category_id);
 
-select * from courses;
+--select * from courses;
 
 CREATE TABLE enrollments (
     enrollment_id BIGSERIAL PRIMARY KEY,
@@ -58,7 +58,7 @@ CREATE TABLE enrollments (
         UNIQUE (member_id, course_id) -- aynı kullanıcının aynı kursa tekrar tekrar katılmasını önlemek için
 );
 
-select * from enrollments;
+--select * from enrollments;
 
 CREATE TABLE certificates (
     certificate_id BIGSERIAL PRIMARY KEY,
